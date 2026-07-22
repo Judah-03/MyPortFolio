@@ -35,6 +35,13 @@ import e7 from "@/assets/ExamPlannerEmit/7.jpeg";
 import e8 from "@/assets/ExamPlannerEmit/8.jpeg";
 import e9 from "@/assets/ExamPlannerEmit/9.jpeg";
 
+import pf1 from "@/assets/MyPortFolio/1.png";
+import pf2 from "@/assets/MyPortFolio/2.png";
+import pf3 from "@/assets/MyPortFolio/3.png";
+import pf4 from "@/assets/MyPortFolio/4.png";
+import pf5 from "@/assets/MyPortFolio/5.png";
+import pf6 from "@/assets/MyPortFolio/6.png";
+
 type Project = {
   title: string;
   description: string;
@@ -47,34 +54,6 @@ type Project = {
 };
 
 const projects: Project[] = [
-  {
-    title: "Gestion des appartements",
-    description: "Application de gestion des appartements alloués avec suivi des locataires, paiement et maintenance.",
-    tech: ["React.js", "Django", "PostgreSQL"],
-    color: "from-blue-500/20 to-cyan-500/10",
-    featured: true,
-  },
-  {
-    title: "Bibliothèque Musicale",
-    description: "Plateforme complète de gestion et lecture de bibliothèque musicale avec gestion de playlists.",
-    tech: ["Java Spring Boot", "MySQL", "React.js"],
-    color: "from-emerald-500/20 to-teal-500/10",
-    featured: true,
-  },
-  {
-    title: "Rencontre entre Musiciens",
-    description: "Application mobile native permettant la rencontre et la collaboration entre musiciens locaux.",
-    tech: ["Flutter", "Firebase", "Node.js"],
-    color: "from-purple-500/20 to-pink-500/10",
-    featured: false,
-  },
-  {
-    title: "Portfolio Interactif",
-    description: "Site web personnel avec animations fluides, design premium et mode sombre optimisé.",
-    tech: ["React.js", "Tailwind", "TypeScript"],
-    color: "from-orange-500/20 to-amber-500/10",
-    featured: false,
-  },
   {
     title: "Pharmacie MANAGE",
     description: "Application pour suivre le stock de médicaments. Le pharmacien enregistre les entrées, les ventes et reçoit une alerte automatique avant la date de péremption.",
@@ -90,8 +69,37 @@ const projects: Project[] = [
     description: "Application de planification et gestion des examens.",
     tech: ["React.js", "Node.js", "Tailwind"],
     color: "from-pink-500/20 to-rose-500/10",
-    featured: false,
+    featured: true,
     images: [e1, e2, e3, e4, e5, e6, e7, e8, e9],
+  },
+  {
+    title: "Portfolio Interactif",
+    description: "Site web personnel avec animations fluides, design premium et mode sombre optimisé.",
+    tech: ["React.js", "Tailwind", "TypeScript"],
+    color: "from-orange-500/20 to-amber-500/10",
+    featured: true,
+    images: [pf1, pf2, pf3, pf4, pf5, pf6],
+  },
+  {
+    title: "Gestion des appartements",
+    description: "Application de gestion des appartements alloués avec suivi des locataires, paiement et maintenance.",
+    tech: ["React.js", "Django", "PostgreSQL"],
+    color: "from-blue-500/20 to-cyan-500/10",
+    featured: false,
+  },
+  {
+    title: "Bibliothèque Musicale",
+    description: "Plateforme complète de gestion et lecture de bibliothèque musicale avec gestion de playlists.",
+    tech: ["Java Spring Boot", "MySQL", "React.js"],
+    color: "from-emerald-500/20 to-teal-500/10",
+    featured: false,
+  },
+  {
+    title: "Rencontre entre Musiciens",
+    description: "Application mobile native permettant la rencontre et la collaboration entre musiciens locaux.",
+    tech: ["Flutter", "Firebase", "Node.js"],
+    color: "from-purple-500/20 to-pink-500/10",
+    featured: false,
   },
 ];
 
