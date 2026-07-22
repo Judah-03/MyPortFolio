@@ -220,7 +220,7 @@ export default function ProjectsSection() {
               </DialogTrigger>
               
               {project.images && project.images.length > 0 && (
-                <DialogContent className="max-w-4xl bg-background/95 backdrop-blur-xl border border-primary/20 text-foreground overflow-hidden">
+                <DialogContent className="max-w-4xl bg-background/95 backdrop-blur-xl border border-primary/20 text-foreground overflow-hidden animate-fade-up">
                   <DialogHeader>
                     <DialogTitle className="text-2xl font-outfit text-primary">{project.title}</DialogTitle>
                     <DialogDescription className="text-muted-foreground">{project.description}</DialogDescription>
@@ -239,7 +239,7 @@ export default function ProjectsSection() {
                         {project.images.map((img, idx) => (
                           <CarouselItem key={idx}>
                             <div className="p-1 flex justify-center">
-                              <img src={img} alt={`${project.title} capture ${idx + 1}`} loading="lazy" decoding="async" className="w-auto h-auto rounded-xl border border-primary/10 shadow-lg object-contain max-h-[60vh] max-w-full" />
+                              <img src={img} alt={`${project.title} capture ${idx + 1}`} loading="lazy" decoding="async" className="w-auto h-auto rounded-xl border border-primary/10 shadow-lg object-contain max-h-[60vh] max-w-full hover:scale-[1.02] transition-transform duration-700 animate-scale-in" />
                             </div>
                           </CarouselItem>
                         ))}

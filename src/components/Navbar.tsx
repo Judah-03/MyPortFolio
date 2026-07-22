@@ -16,15 +16,22 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
+    let ticking = false;
     const onScroll = () => {
-      setScrolled(window.scrollY > 50);
-      const sections = navLinks.map((l) => l.href.slice(1));
-      for (const id of [...sections].reverse()) {
-        const el = document.getElementById(id);
-        if (el && el.getBoundingClientRect().top <= 120) {
-          setActiveSection(id);
-          break;
-        }
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 50);
+          const sections = navLinks.map((l) => l.href.slice(1));
+          for (const id of [...sections].reverse()) {
+            const el = document.getElementById(id);
+            if (el && el.getBoundingClientRect().top <= 120) {
+              setActiveSection((prev) => (prev !== id ? id : prev));
+              break;
+            }
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
     window.addEventListener("scroll", onScroll, { passive: true });
