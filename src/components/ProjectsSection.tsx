@@ -57,7 +57,7 @@ const projects: Project[] = [
   {
     title: "Pharmacie MANAGE",
     description: "Application pour suivre le stock de médicaments. Le pharmacien enregistre les entrées, les ventes et reçoit une alerte automatique avant la date de péremption.",
-    tech: ["Java", "MySQL"],
+    tech: ["MySQL", "Express", "EJS"],
     color: "from-indigo-500/20 to-blue-500/10",
     featured: true,
     github: "https://github.com/Judah-03/PharmaJ",
@@ -67,13 +67,13 @@ const projects: Project[] = [
   {
     title: "ExamPlannerEmit",
     description: "Application de planification et gestion des examens.",
-    tech: ["React.js", "Node.js", "Tailwind"],
+    tech: ["Flutter", "PostgreSQL", "Express"],
     color: "from-pink-500/20 to-rose-500/10",
     featured: true,
     images: [e1, e2, e3, e4, e5, e6, e7, e8, e9],
   },
   {
-    title: "Portfolio Interactif",
+    title: "My Port folio",
     description: "Site web personnel avec animations fluides, design premium et mode sombre optimisé.",
     tech: ["React.js", "Tailwind", "TypeScript"],
     color: "from-orange-500/20 to-amber-500/10",

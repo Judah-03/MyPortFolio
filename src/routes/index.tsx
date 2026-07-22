@@ -11,9 +11,9 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Portfolio — Développeur Full Stack Junior" },
+      { title: "Judah Andriatiana" },
       { name: "description", content: "Développeur web full stack junior, étudiant en L3 Informatique à l'EMIT Fianarantsoa. React, Django, Spring Boot, Flutter." },
-      { property: "og:title", content: "Portfolio — Développeur Full Stack Junior" },
+      { property: "og:title", content: "Judah Andriatiana" },
       { property: "og:description", content: "Développeur web full stack junior passionné par les technologies modernes." },
     ],
   }),
