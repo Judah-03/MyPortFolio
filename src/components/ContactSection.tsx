@@ -16,7 +16,7 @@ const socials = [
 // EmailJS config — you need to set these up at https://www.emailjs.com/
 const EMAILJS_SERVICE_ID = "service_portfolio";
 const EMAILJS_TEMPLATE_ID = "template_contact";
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY"; // Replace with your EmailJS public key
+const EMAILJS_PUBLIC_KEY = "iHhTv6nnu-RGJskPb"; // Replace with your EmailJS public key
 
 export default function ContactSection() {
   const ref = useRef<HTMLDivElement>(null);
