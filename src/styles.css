@@ -94,6 +94,12 @@
     border-color: var(--color-border);
   }
 
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
@@ -140,8 +146,11 @@
 
   .glass {
     background: oklch(0.17 0.01 270 / 60%);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border: 1px solid oklch(1 0 0 / 5%);
+    will-change: transform;
+    transform: translateZ(0);
   }
 
   .animate-float {
@@ -185,9 +194,11 @@
 
   .hover-lift {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+    transform: translateZ(0);
   }
   .hover-lift:hover {
-    transform: translateY(-8px);
+    transform: translateY(-8px) translateZ(0);
     box-shadow: 0 20px 40px oklch(0 0 0 / 30%), 0 0 30px oklch(0.55 0.18 15 / 10%);
   }
 

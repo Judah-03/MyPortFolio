@@ -154,7 +154,7 @@ export default function ProjectsSection() {
                         <CarouselContent className="h-full ml-0">
                           {project.images.map((img, idx) => (
                             <CarouselItem key={idx} className="h-full pl-0 basis-full">
-                              <img src={img} alt="" className="w-full h-full object-cover" />
+                              <img src={img} alt="" loading="lazy" decoding="async" className="w-full h-full object-cover" />
                             </CarouselItem>
                           ))}
                         </CarouselContent>
@@ -239,7 +239,7 @@ export default function ProjectsSection() {
                         {project.images.map((img, idx) => (
                           <CarouselItem key={idx}>
                             <div className="p-1 flex justify-center">
-                              <img src={img} alt={`${project.title} capture ${idx + 1}`} className="w-auto h-auto rounded-xl border border-primary/10 shadow-lg object-contain max-h-[60vh] max-w-full" />
+                              <img src={img} alt={`${project.title} capture ${idx + 1}`} loading="lazy" decoding="async" className="w-auto h-auto rounded-xl border border-primary/10 shadow-lg object-contain max-h-[60vh] max-w-full" />
                             </div>
                           </CarouselItem>
                         ))}
