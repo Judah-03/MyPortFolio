@@ -8,9 +8,8 @@ export default function HeroSection() {
 
   return (
     <section id="hero" className="min-h-screen flex items-center relative overflow-hidden py-24">
-      {/* Background gradient orbs */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 rounded-full bg-primary/10 blur-3xl animate-float" />
-      <div className="absolute bottom-1/4 -right-32 w-80 h-80 rounded-full bg-accent/10 blur-3xl animate-float" style={{ animationDelay: "3s" }} />
+      <div className="absolute top-1/4 -left-32 w-96 h-96 rounded-full bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-primary/20 to-transparent animate-float" />
+      <div className="absolute bottom-1/4 -right-32 w-80 h-80 rounded-full bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-accent/20 to-transparent animate-float" style={{ animationDelay: "3s" }} />
 
       {/* Grid pattern */}
       <div className="absolute inset-0 opacity-[0.03]" style={{

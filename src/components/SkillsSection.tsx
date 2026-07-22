@@ -41,9 +41,8 @@ export default function SkillsSection() {
 
   return (
     <section id="skills" className="py-24 relative overflow-hidden" ref={ref}>
-      {/* Background decorations */}
-      <div className="absolute top-1/4 -left-32 w-80 h-80 rounded-full bg-primary/5 blur-3xl" />
-      <div className="absolute bottom-1/4 -right-32 w-80 h-80 rounded-full bg-accent/5 blur-3xl" />
+      <div className="absolute top-1/4 -left-32 w-80 h-80 rounded-full bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-primary/10 to-transparent" />
+      <div className="absolute bottom-1/4 -right-32 w-80 h-80 rounded-full bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-accent/10 to-transparent" />
       
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
 

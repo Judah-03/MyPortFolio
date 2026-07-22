@@ -23,9 +23,8 @@ export default function AboutSection() {
 
   return (
     <section id="about" className="py-24 relative overflow-hidden" ref={ref}>
-      {/* Background decorations */}
-      <div className="absolute top-1/2 -right-32 w-96 h-96 rounded-full bg-primary/5 blur-3xl" />
-      <div className="absolute bottom-1/4 -left-32 w-80 h-80 rounded-full bg-accent/5 blur-3xl" />
+      <div className="absolute top-1/2 -right-32 w-96 h-96 rounded-full bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-primary/10 to-transparent" />
+      <div className="absolute bottom-1/4 -left-32 w-80 h-80 rounded-full bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-accent/10 to-transparent" />
 
       <div className="max-w-4xl mx-auto px-6 relative z-10">
         <div className={`transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>

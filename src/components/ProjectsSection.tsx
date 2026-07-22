@@ -147,7 +147,7 @@ export default function ProjectsSection() {
                   <div className={`h-28 bg-gradient-to-br ${project.color} relative overflow-hidden`}>
                     {project.images && project.images.length > 0 ? (
                       <Carousel
-                        className="w-full h-full absolute inset-0 opacity-70 group-hover:opacity-30 transition-opacity duration-500 pointer-events-none mix-blend-overlay"
+                        className="w-full h-full absolute inset-0 opacity-40 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none"
                         opts={{ loop: true, watchDrag: false }}
                         plugins={[Autoplay({ delay: 3000 })]}
                       >
@@ -171,7 +171,7 @@ export default function ProjectsSection() {
                       </div>
                     )}
                     
-                    <div className="absolute inset-0 bg-background/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-3">
+                    <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-3">
                       {project.demo ? (
                         <button onClick={(e) => { e.stopPropagation(); window.open(project.demo, '_blank'); }} className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:scale-110 transition-transform shadow-xl shadow-primary/20">
                           <ExternalLink className="w-4 h-4" />
@@ -220,7 +220,7 @@ export default function ProjectsSection() {
               </DialogTrigger>
               
               {project.images && project.images.length > 0 && (
-                <DialogContent className="max-w-4xl bg-background/95 backdrop-blur-xl border border-primary/20 text-foreground overflow-hidden animate-fade-up">
+                <DialogContent className="max-w-4xl bg-background/95 border border-primary/20 text-foreground overflow-hidden">
                   <DialogHeader>
                     <DialogTitle className="text-2xl font-outfit text-primary">{project.title}</DialogTitle>
                     <DialogDescription className="text-muted-foreground">{project.description}</DialogDescription>
@@ -239,7 +239,7 @@ export default function ProjectsSection() {
                         {project.images.map((img, idx) => (
                           <CarouselItem key={idx}>
                             <div className="p-1 flex justify-center">
-                              <img src={img} alt={`${project.title} capture ${idx + 1}`} loading="lazy" decoding="async" className="w-auto h-auto rounded-xl border border-primary/10 shadow-lg object-contain max-h-[60vh] max-w-full hover:scale-[1.02] transition-transform duration-700 animate-scale-in" />
+                              <img src={img} alt={`${project.title} capture ${idx + 1}`} className="w-auto h-auto rounded-xl border border-primary/10 shadow-lg object-contain max-h-[60vh] max-w-full" />
                             </div>
                           </CarouselItem>
                         ))}

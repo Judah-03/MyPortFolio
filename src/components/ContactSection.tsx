@@ -73,8 +73,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-16 relative" ref={ref}>
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-      {/* Background accent */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-primary/10 to-transparent pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-6 relative">
         <div className={`text-center transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
