@@ -25,7 +25,7 @@ export default function HeroSection() {
           <div className="animate-fade-up-delay-1 mb-8">
             <h1 className="text-3xl md:text-5xl font-extrabold leading-[1.1] font-outfit tracking-tight">
 
-              <span className="text-primary text-glow">Développeur FULL STACK</span>
+              <span className="text-primary text-glow">Développeur FULL STACK & Dev Odoo Junior</span>
               <br />
               <span className="text-foreground block mt-2 hover:scale-[1.01] transition-transform duration-500 cursor-default">
                 Ny Aina Fy Judah{" "}

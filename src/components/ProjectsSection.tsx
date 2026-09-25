@@ -42,6 +42,13 @@ import pf4 from "@/assets/MyPortFolio/4.png";
 import pf5 from "@/assets/MyPortFolio/5.png";
 import pf6 from "@/assets/MyPortFolio/6.png";
 
+import md1 from "@/assets/WebsiteManjaryDesign/1.png";
+import md2 from "@/assets/WebsiteManjaryDesign/2.png";
+import md3 from "@/assets/WebsiteManjaryDesign/3.png";
+import md4 from "@/assets/WebsiteManjaryDesign/4.png";
+import md5 from "@/assets/WebsiteManjaryDesign/5.png";
+import md6 from "@/assets/WebsiteManjaryDesign/6.png";
+
 type Project = {
   title: string;
   description: string;
@@ -51,6 +58,7 @@ type Project = {
   github?: string;
   demo?: string;
   images?: string[];
+  category: string;
 };
 
 const projects: Project[] = [
@@ -63,6 +71,7 @@ const projects: Project[] = [
     github: "https://github.com/Judah-03/PharmaJ",
     demo: "https://pharmaciemanage.vercel.app",
     images: [p1, p2, p3, p4, p5, p6, p7],
+    category: "Application Web",
   },
   {
     title: "ExamPlannerEmit",
@@ -71,6 +80,7 @@ const projects: Project[] = [
     color: "from-pink-500/20 to-rose-500/10",
     featured: true,
     images: [e1, e2, e3, e4, e5, e6, e7, e8, e9],
+    category: "Application Mobile",
   },
   {
     title: "My Port folio",
@@ -79,6 +89,17 @@ const projects: Project[] = [
     color: "from-orange-500/20 to-amber-500/10",
     featured: true,
     images: [pf1, pf2, pf3, pf4, pf5, pf6],
+    category: "Site Vitrine",
+  },
+  {
+    title: "Manjary Design",
+    description: "Site vitrine moderne pour une agence de design, présentant les services et les réalisations.",
+    tech: ["React.js", "Tailwind", "Vite"],
+    color: "from-violet-500/20 to-fuchsia-500/10",
+    featured: true,
+    demo: "https://manjary-design.com",
+    images: [md1, md2, md3, md4, md5, md6],
+    category: "Site Vitrine",
   },
   {
     title: "Gestion des appartements",
@@ -86,6 +107,7 @@ const projects: Project[] = [
     tech: ["React.js", "Django", "PostgreSQL"],
     color: "from-blue-500/20 to-cyan-500/10",
     featured: false,
+    category: "Application Web",
   },
   {
     title: "Bibliothèque Musicale",
@@ -93,6 +115,7 @@ const projects: Project[] = [
     tech: ["Java Spring Boot", "MySQL", "React.js"],
     color: "from-emerald-500/20 to-teal-500/10",
     featured: false,
+    category: "Application Web",
   },
   {
     title: "Rencontre entre Musiciens",
@@ -100,12 +123,16 @@ const projects: Project[] = [
     tech: ["Flutter", "Firebase", "Node.js"],
     color: "from-purple-500/20 to-pink-500/10",
     featured: false,
+    category: "Application Mobile",
   },
 ];
 
 export default function ProjectsSection() {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
+  const [filter, setFilter] = useState("Tous");
+  const categories = ["Tous", "Site Vitrine", "Application Web", "Application Mobile"];
+  const filteredProjects = projects.filter(p => filter === "Tous" || p.category === filter);
 
   useEffect(() => {
     const obs = new IntersectionObserver(
@@ -132,10 +159,26 @@ export default function ProjectsSection() {
               Une sélection de mes travaux les plus récents, combinant expertise technique et design soigné.
             </p>
           </div>
+          
+          <div className="flex flex-wrap gap-2 mb-8">
+            {categories.map(cat => (
+              <button
+                key={cat}
+                onClick={() => setFilter(cat)}
+                className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-300 ${
+                  filter === cat 
+                    ? "bg-primary text-primary-foreground shadow-[0_0_15px_oklch(0.55_0.18_15/30%)]" 
+                    : "glass text-muted-foreground hover:text-primary hover:border-primary/30"
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-          {projects.map((project, i) => (
+          {filteredProjects.map((project, i) => (
             <Dialog key={project.title}>
               <DialogTrigger asChild>
                 <div
